@@ -2,11 +2,11 @@ import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import styled from 'styled-components';
 import parse from 'html-react-parser';
-import nanoid from 'nanoid';
+// import nanoid from 'nanoid';
 import { getSinglePost, getAllPosts, getAssets } from '../util/dataFetching';
 import Layout from '../components/MyLayout';
 import Title from '../components/atoms/Title';
-import Text from '../components/atoms/Text';
+// import Text from '../components/atoms/Text';
 import Box from '../components/atoms/Box';
 import '../style.scss';
 
@@ -16,11 +16,11 @@ const options = {
       `<img class="img" src="${node.data.target.sys.id}" id="" alt='oi' />`
   }
 };
-
+/*
 const StyledTitle = styled(Title)`
   font-family: 'adelle-sans';
 `;
-
+*/
 const swapUrlForID = async (string, slug) => {
   const newString = string;
   const assetArray = getAssets(slug)
